@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Login</title>
+      <style>
+          .bg-nav{
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+      </style>
+  </head>
+  <body class="bg-nav">
+    <nav class="navbar">
+        <a href="" class="navbar-brand text-dark">Sherlock Stackflow</a>
+        <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/Register">Register</a>
+        <a class="p-2 text-dark" href="/">Home</a>
+
+      </nav>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-dark display-4 " style="font-size:80px; margin-top:100px">Share and grow the world’s knowledge !</h1>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="margin-top:100px">
+                    <div class="card-body">
+                    <form class="form" method="post" action="/login_validation">
+                        <label>Email</label><br>
+                        <input type="email" class="form-control" name="email"><br>
+                        <label>Password</label><br>
+                        <input type="password" class="form-control" name="password"><br><br>
+                        <button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
+                    </form>
+                     <p class="mt-2">Not a memeber? <a href="/Register"> Create Account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

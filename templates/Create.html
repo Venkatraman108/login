@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/home.css')}}">
+    <style>
+        .bg-nav{
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    </style>
+</head>
+<body class="container bg-nav">
+    <div class="jumbotron">
+        <form class="form" method="post" action="/create_ques">
+            <input type="text" class="form-control" name="name" placeholder="Enter the name"><br>
+            <label>Enter the Question</label><br>
+            <textarea class="form-control" name="question" rows="3"></textarea>
+            <button type="submit" class="btn btn-success btn-block btn-lg">Create Question</button>
+
+
+        </form>
+    </div>
+
+
+</body>
+</html>
